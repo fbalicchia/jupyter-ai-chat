@@ -15,9 +15,6 @@ classifiers = [
     "Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt",
     "License :: OSI Approved :: BSD License",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
 ]
@@ -27,7 +24,7 @@ dynamic = ["version", "description", "authors", "urls", "keywords"]
 dependencies = [
     "jupyter_ai",
     "jupyterlab~=4.0",
-
+    "jupyter_server>=1.6,<3",
 ]
 
 [project.entry-points."jupyter_ai.chat_handlers"]
