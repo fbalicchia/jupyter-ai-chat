@@ -15,6 +15,9 @@ classifiers = [
     "Framework :: Jupyter :: JupyterLab :: Extensions :: Prebuilt",
     "License :: OSI Approved :: BSD License",
     "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
 ]
@@ -22,14 +25,14 @@ classifiers = [
 dynamic = ["version", "description", "authors", "urls", "keywords"]
 
 dependencies = [
-    "jupyter_ai",
-    "jupyterlab~=4.0",
-    "jupyter_server>=1.6,<3",
+    "jupyter_ai"
 ]
 
-[project.entry-points."jupyter_ai.chat_handlers"]
-custom = "jupyter_ai_chat:CustomChatHandler"
+[project.entry-points."jupyter_ai.model_engine_classes"]
+TestModelEngine = "jupyter_ai_chat:TestModelEngine"
 
+[project.entry-points."jupyter_ai.default_tasks"]
+TestDefaultTasks = "jupyter_ai_chat:tasks"
 
 [tool.hatch.version]
 source = "nodejs"
